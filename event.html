@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        .cont{
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            border: 2px solid black;
+            margin-bottom: 50px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quod dolores vel aspernatur quasi reprehenderit. Tenetur dolore deserunt, consequuntur dicta sint optio at fugit ducimus cupiditate sapiente atque. Nemo quo rem exercitationem eligendi, aut delectus tempora? Officia dignissimos voluptate reiciendis deleniti, neque corrupti alias doloribus perspiciatis. Ducimus numquam totam quaerat magnam quia illum eius quis. Temporibus, culpa minima ea cumque debitis eaque amet rem, recusandae cupiditate dolor ducimus aperiam fugit aspernatur fugiat voluptatibus sed omnis! Voluptas modi ut rem aliquam totam odio suscipit ea natus. Aliquid ipsam ex ducimus eum rerum molestias magnam commodi ullam praesentium eaque laboriosam dicta minus dolor officiis aspernatur, suscipit maxime, reiciendis excepturi dolorem cupiditate iure sit exercitationem nobis! Molestiae voluptas obcaecati maxime modi, error quo blanditiis enim magnam quae deserunt laudantium, ipsam eaque pariatur libero ut sint reiciendis cum veritatis ullam totam consequatur doloremque expedita! Commodi laborum magni nobis itaque quas a ad ipsum incidunt labore sit, ipsam reiciendis architecto, quis et perferendis in praesentium consequatur quasi ex nihil! Reiciendis sint iure iste corrupti inventore, placeat laboriosam delectus rem eos sed fugiat laudantium itaque at voluptas ut, doloremque blanditiis nam, officiis debitis? Hic aspernatur pariatur totam eius perferendis nam, cumque, molestias ullam quam quia omnis tempore laborum voluptate incidunt magnam itaque aliquam dignissimos odit? Odio odit fugit dignissimos asperiores mollitia quo cupiditate illo, quia, neque iure aspernatur id. Reiciendis ipsa quaerat ratione necessitatibus quas, optio repudiandae, perspiciatis temporibus adipisci nemo voluptates soluta sunt? Tenetur alias ipsum non id error expedita ab fuga veniam quasi, esse ullam blanditiis maiores consequatur, perferendis itaque magni possimus autem odio iure porro quidem commodi dolor? Perspiciatis incidunt culpa vitae recusandae pariatur! Exercitationem accusamus nesciunt quibusdam quisquam reprehenderit nobis modi officia velit ipsam expedita dolor ipsa quae, tempore eius? Ipsum soluta eos inventore! Quod et fuga tenetur repudiandae quisquam quos ipsam animi, veritatis officiis esse nam praesentium quas eligendi nostrum commodi quibusdam iure ratione aut, impedit nobis, sed eum vel. Mollitia natus neque, harum explicabo officiis architecto, quasi sint hic voluptas sunt ducimus corrupti ipsum impedit rerum. Nihil aliquam quo tenetur assumenda, amet tempore vero animi doloribus recusandae necessitatibus! Consequatur dolor libero nihil qui enim fugit neque laudantium fuga dolorum, facere, ratione, accusantium praesentium. Repellat blanditiis excepturi temporibus obcaecati, labore aperiam rerum! Consectetur expedita ab ea, perferendis ullam laborum architecto quisquam iusto, assumenda reprehenderit possimus incidunt numquam est cumque dicta explicabo accusamus temporibus aperiam. Veritatis magnam assumenda, dicta saepe suscipit nobis commodi mollitia minima fuga ea asperiores sunt? Officia, ipsam! Eligendi voluptatibus earum deserunt fugiat rem nihil iste eos, asperiores excepturi dicta exercitationem. Nostrum nemo, deleniti iure blanditiis quo explicabo sit perspiciatis nobis esse, aliquid amet illum magnam ut quod, necessitatibus sapiente nulla tenetur numquam illo. Dignissimos eaque laudantium officiis, tempore vero qui. Inventore iure a, illo quam magni mollitia? Minus, obcaecati porro! Adipisci tenetur, sequi minima mollitia quam nisi quibusdam explicabo? Excepturi dolores eius dolore magni temporibus illum fugiat, ullam nulla sint commodi eaque ab atque impedit ipsam accusamus, obcaecati possimus repellat esse officiis quis aliquid soluta. Quaerat, asperiores porro!
+    </div>
+    <input type="text" class="input">
+    <button id="btn">load event</button>
+    <div class="show">hello</div>
+    <script src="jquery.js"></script>
+    <script>
+        var x =1;
+        $(document).ready(function()
+        {
+
+
+            $(".btn").click(function()
+            {
+                $(".int").css({"background":"red","color":"white"});
+            });
+            
+            $(".btn").mouseenter(function()
+            {
+                $(".int").css({"background":"blue","color":"white"});
+            });
+            
+            $(".btn").hover(function()
+            {
+                $(".int").css({"background":"pink","color":"white"});
+            });
+
+            $(".cont").scroll(function()
+            {
+                $(".show").text( x+= 1);
+            });
+
+            $(window).resize(function()
+            {
+                $(".show").text( x+= 1);
+            });
+            
+            $(".input").change(function()
+            {
+                $(".show").text( x+= 1);
+            });
+
+            $(".input").focus(function()
+            {
+                $(".int").css({"background":"red","color":"white"});
+            });
+            
+            $(".input").blur(function()
+            {
+                $(".int").css({"background":"none","color":"none"});
+            });
+
+            $(".input").keydown(function()
+            {
+                $(".show").text( x+= 1);
+            });
+
+            $(".input").keydown(function()
+            {
+                $(".show").text( x+= 1);
+            });
+        });
+    </script>
+</body>
+</html>

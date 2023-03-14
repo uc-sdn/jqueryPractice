@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            width: 300px;
+            height: 200px;
+            overflow: auto;
+            /* border: 2px solid black; */
+            margin-bottom: 50px;
+            background-color: palegreen;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="slideup">slideup</button>
+    <button class="slideDown">slide down</button>
+    <div class="cont">
+        
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+
+            $(".hide").click(function()
+            {
+                $(".cont").hide();
+            });
+
+            $(".show").click(function()
+            {
+                $(".cont").show();
+            });
+
+
+
+            $(".slideup").click(function()
+            {
+                $(".cont").slideUp();
+            });
+
+            $(".slideDown").click(function()
+            {
+                $(".cont").slideDown();
+            });
+            
+            
+            $(".slideup").click(function()
+            {
+                $(".cont").slideToggle(3000);
+            });
+
+            $(".slideDown").click(function()
+            {
+                $(".cont").stop();
+            });
+            
+            $(".slideDown").click(function()
+            {
+                $(".cont").animate({width:500});
+                $(".cont").animate({height:400});
+            });
+
+
+
+
+
+            
+
+
+
+        });
+    </script>
+</body>
+</html>
